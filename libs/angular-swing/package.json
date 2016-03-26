@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      "angular-swing",
+      "/Users/augustobarbosa/Projects/politinder"
+    ]
+  ],
+  "_from": "angular-swing@*",
+  "_id": "angular-swing@1.0.0",
+  "_inCache": true,
+  "_location": "/angular-swing",
+  "_nodeVersion": "0.10.33",
+  "_npmUser": {
+    "email": "gk@anuary.com",
+    "name": "gajus"
+  },
+  "_npmVersion": "2.1.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-swing",
+    "raw": "angular-swing",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-swing/-/angular-swing-1.0.0.tgz",
+  "_shasum": "bf5de2c550d00c402d416c496dbf03de7250733a",
+  "_shrinkwrap": null,
+  "_spec": "angular-swing",
+  "_where": "/Users/augustobarbosa/Projects/politinder",
+  "author": {
+    "email": "gk@anuary.com",
+    "name": "Gajus Kuizinas"
+  },
+  "bugs": {
+    "url": "https://github.com/gajus/angular-swing/issues"
+  },
+  "dependencies": {
+    "swing": "^1.0.9"
+  },
+  "description": "AngularJS directive for Swing: A swipeable cards interface. The swipe-left/swipe-right for yes/no input. As seen in apps like Jelly and Tinder.",
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "del": "^0.1.3",
+    "gulp": "^3.8.9",
+    "gulp-browserify": "^0.5.0",
+    "gulp-header": "^1.2.2",
+    "gulp-jshint": "^1.8.5",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1",
+    "jsonfile": "^2.0.0",
+    "karma": "^0.12.24",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "bf5de2c550d00c402d416c496dbf03de7250733a",
+    "tarball": "http://registry.npmjs.org/angular-swing/-/angular-swing-1.0.0.tgz"
+  },
+  "gitHead": "31565d7fc0f075888d360301a4a071ae8f6cd52b",
+  "homepage": "https://github.com/gajus/angular-swing",
+  "installable": true,
+  "keywords": [
+    "cards",
+    "swipe",
+    "swipeable"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "src/swing.js",
+  "maintainers": [
+    {
+      "name": "gajus",
+      "email": "gk@anuary.com"
+    }
+  ],
+  "name": "angular-swing",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gajus/angular-swing"
+  },
+  "scrips": {
+    "test": "gulp test"
+  },
+  "scripts": {},
+  "version": "1.0.0"
+}

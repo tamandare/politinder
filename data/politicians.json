@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "rousseff",
+    "name": "Dilma Rousseff",
+    "processes": {
+      "suspect": 5,
+      "accused": 1,
+      "defendant": 7,
+      "guilty": 3,
+      "filed": 3
+    }
+  },
+  {
+    "slug": "temer",
+    "name": "Michel Temer",
+    "processes": {
+      "suspect": 3,
+      "accused": 5,
+      "defendant": 1,
+      "guilty": 9,
+      "filed": 3
+    }
+  },
+  {
+    "slug": "serra",
+    "name": "José Serra",
+    "processes": {
+      "suspect": 0,
+      "accused": 2,
+      "defendant": 12,
+      "guilty": 1,
+      "filed": 3
+    }
+  },
+  {
+    "slug": "eneas",
+    "name": "Enéas",
+    "processes": {
+      "suspect": 0,
+      "accused": 2,
+      "defendant": 12,
+      "guilty": 1,
+      "filed": 3
+    }
+  },
+  {
+    "slug": "freixo",
+    "name": "Marcelo Freixo",
+    "processes": {
+      "suspect": 0,
+      "accused": 2,
+      "defendant": 12,
+      "guilty": 1,
+      "filed": 3
+    }
+  }
+]

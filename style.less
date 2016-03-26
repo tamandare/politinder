@@ -1,0 +1,241 @@
+@import "node_modules/bootstrap-less/bootstrap/bootstrap.less";
+
+body {
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.topbar-wrapper,
+.footer-wrapper {
+  background: #f4f4f4;
+}
+
+.topbar-wrapper {
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+  margin-bottom: 15px;
+  padding: 5px;
+  .info {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+    }
+  }
+  .infos-left .info {
+    // margin-right: 10px;
+  }
+
+  .icon {
+    background-image: url(assets/img/icons.png);
+    background-repeat: no-repeat;
+    width: 19px;
+    &.icon-delivery {
+      background-position: 0 2px;
+    }
+    &.icon-freight {
+      background-position: -24px 2px;
+    }
+    &.icon-change {
+      background-position: -49px 2px;
+    }
+  }
+}
+
+.newsletter-wrapper {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2OUzzb6z0AEYBxECi9YnWMwOGaE4erB5EZcQUq0GwG5txRZ9jBtugAAAABJRU5ErkJggg==);
+  margin-bottom: 25px;
+  padding: 10px;
+  color: #fff;
+  .newsletter-text {
+    font-size: 16px;
+  }
+}
+
+.banner-top {
+  margin-top: 20px;
+  height: 764px;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  @media (max-width: @screen-xs-max) {
+    background-size: 870px;
+    height: 346px;
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    background-size: 1000px;
+    height: 397px;
+  }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    background-size: 1500px;
+    height: 596px;
+  }
+  &.banner1 {
+    background-image: url('assets/img/banner02.jpg');
+  }
+}
+
+.sales {
+  margin-bottom: 20px;
+  img {
+    max-width: 100%;
+  }
+}
+
+h1 {
+  color: #1F6B32;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+a {
+  color: #1F6B32;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.product {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .price {
+    margin-bottom: 10px;
+    s {
+      color: #ccc;
+      display: block;
+    }
+    span {
+      color: #1F6B32;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+.badge-bestseller {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  z-index: 3;
+  @media (max-width: @screen-xs-max) {
+    left: 10px;
+    top: 10px;
+  }
+}
+
+.bottombar {
+  border-top: 1px solid #ccc;
+  color: #ccc;
+  font-size: 12px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.footer-wrapper {
+  margin-top: 45px;
+  padding: 35px 0 25px;
+}
+
+.footer {
+  margin-top: 40px;
+  > div {
+    display: inline-block;
+  }
+  img {
+    vertical-align: middle;
+  }
+}
+
+.flags {
+  img {
+    max-width: 100%
+  }
+}
+
+
+
+.institutes {
+    h3 {
+      font-weight: 700;
+    }
+    .detail {
+      width: 245px;
+      margin: 0 auto;
+    }
+    .img-thumbnail {
+      height: 245px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      max-width: 100%;
+    }
+}
+
+.institute {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.error {
+  background: #eba700;
+  color: #fff;
+  padding: 20px 0;
+  .big {
+    font-size: 36px;
+    font-style: italic;
+  }
+  .small {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.disclaimer {
+  background: #2d6b28;
+  color: #fff;
+  padding: 40px 0;
+  .big {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .small {
+    font-size: 32px;
+  }
+}
+
+.please {
+  color: #2d6b28;
+  font-size: 40px;
+  padding: 40px 0;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.god-message {
+  background: #eba700;
+  color: #fff;
+  padding: 20px 0;
+  .big {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .small {
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 300;
+  }
+}
