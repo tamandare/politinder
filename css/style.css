@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 .phone {
 	font-family: 'Noto Sans', sans-serif;
 }
@@ -87,7 +91,6 @@ span.meta span {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 318px;
-	width: 100%;
 	padding-left: 40px;
 	padding-top: 6px;
 }

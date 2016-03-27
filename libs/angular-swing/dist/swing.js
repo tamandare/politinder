@@ -3723,7 +3723,7 @@ Card = function (stack, targetElement) {
         var x = lastTranslate.x + e.deltaX,
             y = lastTranslate.y + e.deltaY;
 
-        if (config.isThrowOut(x, targetElementWidth)) {
+        if (config.isThrowOut(x, targetElementWidth / 2.5)) {
             card.throwOut(x, y);
         } else {
             card.throwIn(x, y);
@@ -3750,7 +3750,7 @@ Card = function (stack, targetElement) {
                 x = rebound.MathUtil.mapValueInRange(value, 0, 1, lastThrow.fromX, throwOutDistance * lastThrow.direction),
                 y = lastThrow.fromY;
 
-            onSpringUpdate(x, y);            
+            onSpringUpdate(x, y);
         }
     });
 
@@ -3850,7 +3850,7 @@ Card = function (stack, targetElement) {
 
 /**
  * Interprets stack.config() object. Sets default configuration.
- * 
+ *
  * @param {Object} config
  * @return {Object}
  */
@@ -3858,7 +3858,7 @@ Card.config = function (config) {
     config = config || {};
 
     config.isThrowOut = config.isThrowOut ? config.isThrowOut : Card.isThrowOut;
-    
+
     config.throwOutConfidence = config.throwOutConfidence ? config.throwOutConfidence : Card.throwOutConfidence;
 
     config.throwOutDistance = config.throwOutDistance ? config.throwOutDistance : Card.throwOutDistance;
@@ -3876,7 +3876,7 @@ Card.config = function (config) {
 /**
  * Invoked in the event of `dragmove` and every time the physics solver is triggered.
  * Uses CSS transform to translate element position and rotation.
- * 
+ *
  * @param {Number} x Horizontal offset from the startDrag.
  * @param {Number} y Vertical offset from the startDrag.
  * @return {null}
@@ -3892,7 +3892,7 @@ Card.transform = function (element, x, y, r) {
  *
  * Invoked in the event of mousedown.
  * Invoked when card is added to the stack.
- * 
+ *
  * @param {HTMLElement} element The target element.
  */
 Card.appendToParent = function (element) {
@@ -3910,7 +3910,7 @@ Card.appendToParent = function (element) {
  * Invoked in the event of dragmove.
  * Returns a value between 0 and 1 indicating the completeness of the throw out condition.
  * Ration of the absolute distance from the original card position and element width.
- * 
+ *
  * @param {Number} offset Distance from the dragStart.
  * @param {Number} elementWidth Width of the element being dragged.
  * @return {Number}
@@ -3923,7 +3923,7 @@ Card.throwOutConfidence = function (offset, elementWidth) {
  * Invoked in the event of dragend.
  * Determines if element is being thrown out of the stack.
  * Element is considered to be thrown out when throwOutConfidence is equal to 1.
- * 
+ *
  * @param {Number} offset Distance from the dragStart.
  * @param {Number} elementWidth Width of the element being dragged.
  * @return {Boolean}
@@ -3936,7 +3936,7 @@ Card.isThrowOut = function (offset, elementWidth) {
  * Invoked when card is added to the stack.
  * The card is thrown to this offset from the stack.
  * The value is a random number between minThrowOutDistance and maxThrowOutDistance.
- * 
+ *
  * @return {Number}
  */
 Card.throwOutDistance = function (minThrowOutDistance, maxThrowOutDistance) {
@@ -3946,7 +3946,7 @@ Card.throwOutDistance = function (minThrowOutDistance, maxThrowOutDistance) {
 /**
  * Rotation is equal to the proportion of horizontal and vertical offset
  * times the maximumRotation constant.
- * 
+ *
  * @param {Number} x Horizontal offset from the startDrag.
  * @param {Number} y Vertical offset from the startDrag.
  * @param {Number} elementWidth
@@ -3985,7 +3985,7 @@ Stack = function (config) {
 
     /**
      * Get the configuration object.
-     * 
+     *
      * @return {Object}
      */
     stack.config = function () {
@@ -3994,7 +3994,7 @@ Stack = function (config) {
 
     /**
      * Get a singleton instance of the SpringSystem physics engine.
-     * 
+     *
      * @return {Sister}
      */
     stack.springSystem = function () {
@@ -4003,7 +4003,7 @@ Stack = function (config) {
 
     /**
      * Proxy to the instance of the event emitter.
-     * 
+     *
      * @param {String} eventName
      * @param {String} listener
      */
