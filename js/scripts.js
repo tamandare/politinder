@@ -25,14 +25,14 @@
 			$scope.currentPoliticians[0].trusted = true;
 			$timeout(function() {
 				$scope.iTrustIn();
-			}, 500);
+			}, 300);
 		}
 
 		$scope.clickDontTrustIn = function() {
 			$scope.currentPoliticians[0].trusted = false;
 			$timeout(function() {
 				$scope.iDontTrustIn();
-			}, 500);
+			}, 300);
 		}
 
 		$scope.iTrustIn = function() {
