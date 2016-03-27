@@ -5,17 +5,6 @@
 
 	politinder.controller('politinderController', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 
-		$scope.swingOptions = {
-		    throwOutConfidence: function (offset, element) {
-		        console.log('throwOutConfidence', offset, element.offsetWidth);
-		        return Math.min(Math.abs(offset) / element.offsetWidth, 1);
-		    },
-		    isThrowOut: function (offset, element, throwOutConfidence) {
-		        console.log('isThrowOut', offset, element.offsetWidth, throwOutConfidence);
-		        return throwOutConfidence === .5;
-		    }
-		};
-
 		$scope.politicians = [];
     $scope.currentPoliticians = [];
 
@@ -30,24 +19,33 @@
 				$scope.currentPoliticians.push($scope.politicians[randomPoliticianI]);
 				$scope.politicians.splice(randomPoliticianI, 1);
 			}
-
-			$timeout(function () {
-				$scope.$apply();
-			}, 10);
-
 		});
 
-		$scope.iTrustIn = function(politician, i) {
-			$scope.nextPolitician(politician, i);
+		$scope.clickTrustIn = function() {
+			$scope.currentPoliticians[0].trusted = true;
+			$timeout(function() {
+				$scope.iTrustIn();
+			}, 500);
 		}
 
-		$scope.iDontTrustIn = function(politician, i) {
-			$scope.nextPolitician(politician, i);
+		$scope.clickDontTrustIn = function() {
+			$scope.currentPoliticians[0].trusted = false;
+			$timeout(function() {
+				$scope.iDontTrustIn();
+			}, 500);
 		}
 
-		$scope.nextPolitician = function(politician, i) {
+		$scope.iTrustIn = function() {
+			$scope.nextPolitician();
+		}
+
+		$scope.iDontTrustIn = function() {
+			$scope.nextPolitician();
+		}
+
+		$scope.nextPolitician = function() {
 			// remove
-			$scope.currentPoliticians.splice(i, 1);
+			$scope.currentPoliticians.splice(0, 1);
 
 			// adds one more
 			if ($scope.politicians.length > 0) {

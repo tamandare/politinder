@@ -32,11 +32,11 @@
     			<div class="content" swing-stack>
             <div
               class="photo"
+              ng-class="{'trusted': politician.trusted === true, 'untrusted': politician.trusted === false}"
               swing-card
-
               ng-repeat="politician in currentPoliticians"
-              swing-on-throwoutleft="iDontTrustIn($index, politician)"
-              swing-on-throwoutright="iTrustIn($index, politician)"
+              swing-on-throwoutleft="iDontTrustIn()"
+              swing-on-throwoutright="iTrustIn()"
               style="background-image:url(img/politicians/{{ politician.slug }}.png);">
               <span class="meta">
                  <p>{{ politician.name }}</p>
@@ -45,8 +45,8 @@
           </div>
 
     			<div class="footer">
-    				<div id="swipe_dislike" class="rate" ng-click="iDontTrustIn($index, politician)"></div>
-    				<div id="swipe_like" class="rate" ng-click="iTrustIn($index, politician)"></div>
+    				<div id="swipe_dislike" class="rate" ng-click="clickDontTrustIn()"></div>
+    				<div id="swipe_like" class="rate" ng-click="clickTrustIn()"></div>
     			</div>
 
     	</div>
